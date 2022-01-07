@@ -6,60 +6,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="./style.css" />
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/content.css" />
   </head>
   <body>
 
-    <svg id="animator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-      <rect fill="#ffffff" width="1600" height="900" />
-      <defs>
-        <linearGradient id="a" x1="0" x2="0" y1="1" y2="0">
-          <stop offset="0" stop-color="#000000" />
-          <stop offset="1" stop-color="#D1C344" />
-        </linearGradient>
-        <linearGradient id="b" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stop-color="#676518" />
-          <stop offset="1" stop-color="#FC0" />
-        </linearGradient>
-      </defs>
-      <g fill="#FFF" fill-opacity="0" stroke-miterlimit="10">
-        <g stroke="url(#a)" stroke-width="2">
-          <path id="triangle" transform="" d="M1409 581 1450.35 511 1490 581z" />
-          <circle id="circle" stroke-width="4" transform="" cx="500" cy="100" r="40" />
-          <path id="semicircle"
-            transform=""
-            d="M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z"
-          />
-        </g>
-        <g stroke="url(#b)" stroke-width="4">
-          <path
-            id="rhomb"
-            transform=""
-            d="M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z"
-          />
-          <rect
-            id="square"
-            stroke-width="8"
-            transform=""
-            x="1039"
-            y="709"
-            width="100"
-            height="100"
-          />
-          <path
-            id="hexagon"
-            transform=""
-            d="M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z"
-          />
-        </g>
-      </g>
-    </svg>
+    <!-- Nav -->
+    <nav id="myNav" class="menu">
+      <div class="menu__content">
+          <a href="#" class="menu__link">Inicio</a>
+          <a href="#sobremi" class="menu__link">Sobre mi</a>
+          <a href="#proyectos" class="menu__link">Proyectos</a>
+          <a href="#contacto" class="menu__link">Contactame</a>
+          <div class="menu__content--social">
+              <a href="https://www.linkedin.com/in/juanmanueltola/" class="menu__link"><i class="fab fa-linkedin"></i></i></a>
+              <a href="https://github.com/juanmatola" class="menu__link"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/juanma.tola/" class="menu__link"><i class="fab fa-instagram"></i></i></a>
+          </div>
+      </div>
+      <a class="color-dark" id="openNav">
+          <i class="bi bi-list"></i>
+      </a>
+    </nav>
+    <!-- Nav End -->
 
-    <div id="title">
-      <h1>Juan Manuel Tola</h1>
-      <h2 id="subtitle">< Web Developer /></h2>
+    <div class="intro" id="intro">
+      <svg id="animator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+        <rect fill="#ffffff" width="1600" height="900" />
+        <defs>
+          <linearGradient id="a" x1="0" x2="0" y1="1" y2="0">
+            <stop offset="0" stop-color="#000000" />
+            <stop offset="1" stop-color="#D1C344" />
+          </linearGradient>
+          <linearGradient id="b" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#676518" />
+            <stop offset="1" stop-color="#FC0" />
+          </linearGradient>
+        </defs>
+        <g fill="#FFF" fill-opacity="0" stroke-miterlimit="10">
+          <g stroke="url(#a)" stroke-width="2">
+            <path id="triangle" transform="" d="M1409 581 1450.35 511 1490 581z" />
+            <circle id="circle" stroke-width="4" transform="" cx="500" cy="100" r="40" />
+            <path id="semicircle"
+              transform=""
+              d="M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z"
+            />
+          </g>
+          <g stroke="url(#b)" stroke-width="4">
+            <path
+              id="rhomb"
+              transform=""
+              d="M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z"
+            />
+            <rect
+              id="square"
+              stroke-width="8"
+              transform=""
+              x="1039"
+              y="709"
+              width="100"
+              height="100"
+            />
+            <path
+              id="hexagon"
+              transform=""
+              d="M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z"
+            />
+          </g>
+        </g>
+      </svg>
+  
+      <div id="title">
+        <h1>Juan Manuel Tola</h1>
+        <div class="typewriter">
+          <h2 id="subtitle">< Web Developer /></h2>
+        </div>
+      </div>
     </div>
 
-    <script src="./main.js" type="module"></script>
+    <div class="content">
+      <div class="container">
+
+        <section class="section" id="sobremi">
+          <h2 class="text-center my-5 mt-md-0 py-5" data-aos="fade-left"><span class="section__title"><strong>Sobre mi</strong></span></h2>
+          <div class="row  justify-content-around" data-aos="zoom-in" data-aos-delay="200">
+              <div class="col-12 col-md-7 px-3 text-justify">
+                  <h4 class="text-center">Técnico en Electrónica y estudiante de Ingeniería</h4>
+                  <p>
+                      Me llamo Juan Manuel Tola y tengo 26 años,
+                      luego de varios cursos sobre tecnologías web me encuentro realizando trabajos de forma autónoma, continuando con mi formación.
+                      <br>
+                      <br>
+                  </p>
+                  <p class="text-muted mt-4">
+                      Técnico recibido en Colegio San José nº8013, Rosario, Santa Fe, Argentina
+                      <br>
+                      Finalizando el segundo año de Ingeniería Electrónica (UNR)
+                  </p>
+              </div>
+              <div class="col-12 col-md-4 px-4">
+                  <h4 class="text-center">Cursos</h4>
+                  <ul class="text-justify">
+                      <li>Curso Java Full Stack (UNR) <i class="fas fa-long-arrow-alt-right"></i> <a href="./assets/img/certificado-juanmmanueltola.jpeg" target="_blank"> Certificado</a></li>
+                      <li>Curso Profesional de Git y GitHub <i class="fas fa-long-arrow-alt-right"></i> <a href="https://platzi.com/@juanmanueltola/curso/1557-git-github/diploma/detalle/" target="_blank"> Certificado</a></li>
+                      <li>"Maquetación web" - Polo Tecnológico Rosario <i class="fas fa-long-arrow-alt-right"></i> <a href="https://www.linkedin.com/posts/juanmanueltola_certificado-de-curso-maquetaci%C3%B3n-web-activity-6696512102149959681-R3gi" target="_blank"> Certificado</a></li>
+                      <li>Curso de ECMAScript6+  <i class="fas fa-long-arrow-alt-right"></i> <a href="https://platzi.com/@juanmanueltola/curso/1815-ecmascript-6/diploma/detalle/" target="_blank"> Certificado</a></li>
+                      <li>Curso de Frontend Developer <i class="fas fa-long-arrow-alt-right"></i> <a href="https://platzi.com/@juanmanueltola/curso/1640-frontend-developer/diploma/detalle/" target="_blank"> Certificado</a></li>
+                  </ul>
+              </div>
+          </div>
+        </section>
+  
+        <section class="section links-de-interes d-flex align-content-center justify-content-around">
+            
+            <div class="link-card">
+                <a href="https://www.linkedin.com/in/juanmanueltola/">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+  
+            <div class="link-card">
+                <a href="https://github.com/juanmatola">
+                  <i class="bi bi-github"></i>
+                </a>
+            </div>
+  
+            <div class="link-card">
+                <a href="https://www.instagram.com/juanma.tola/">
+                  <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+              
+        </section>
+  
+        <section class="section proyectos-box" id="proyectos">
+            <h2 class="text-center my-5 mt-md-0 py-5" data-aos="fade-right"><span class="section__title"><strong>Proyectos</strong></span></h2>
+            <div class="row" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/miti-miti.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Miti Miti App</h3>
+                            <div class="box-text text-justify">
+                                <p>
+                                    Applicación web para la división de gastos de un evento entre sus participantes. Agrega amigos, crea un evento, carga gastos y obtén un resumen de gastos de cada participante en tablas y gráficos. <br><br> Construída con Spring MVC (Java), MySQL, Thymeleaf, Bootstrap 5 y Vanilla JavaScript.
+                                </p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i>
+                                    <i class="fab fa-java"></i></i><img src="./assets/img/icons/mysql-logo.svg" alt=""></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="https://github.com/juanmatola/mitimiti-app" target="_blank">Ver en Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/todo-app.png" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>ToDo App</h3>
+                            <div class="box-text text-justify">
+                                <p>
+                                    Applicación web realizada como práctica de Spring Framework <br><br> <b>Función:</b>  carga y control de tareas realizadas y por realizar. <br><br> Construída con Spring MVC (Java), MySQL, Thymeleaf, Bootstrap 5 y Vanilla JavaScript.
+                                </p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i>
+                                    <i class="fab fa-java"></i></i><img src="./assets/img/icons/mysql-logo.svg" alt=""></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="https://juanma-todo-app.herokuapp.com/" target="_blank">Visitar</a>
+                                <br><br>
+                                <a href="https://github.com/juanmatola/todo-app" target="_blank"><small>Ver en Github</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/indulimp.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Indulimp</h3>
+                            <div class="box-text text-justify">
+                                <p>
+                                    Web empresarial construída con Codeigniter 4 (php) y Bootstrap 5 que permite la carga/edición de listas de precios e imagenes en una galería mediante un panel de administración.
+                                </p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i><i class="fab fa-php"></i><img src="./assets/img/icons/mysql-logo.svg" alt=""></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="http://indulimp.com.ar" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/leila-sergi.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Leila Sergi</h3>
+                            <div class="box-text text-justify">
+                                <p class="text-center">Portafolio para diseñadora gráfica Leila Sergi.</p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="https://leilasergi.com" target="_blank">Visitar</a>
+                                <br><br>
+                                <a href="https://github.com/juanmatola/leila-sergi" target="_blank"><small>Código fuente</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/stgo.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>STGO estudio</h3>
+                            <div class="box-text text-justify">
+                                <p>Applicación web construída con Codeigniter 4 (php) que permite la publicación/edición de proyectos de un estudio de arquitectura mediante un panel de administración.</p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i><i class="fab fa-php"></i><img src="./assets/img/icons/mysql-logo.svg" alt=""></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="http://stgo.com.ar/" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/belu-rp.jpeg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Belu Rp Ilustración</h3>
+                            <div class="box-text text-justify">
+                                <p>Applicación de Portfolio construída en PHP que permite la publicación de proyectos.</p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i><i class="fab fa-php"></i><img src="./assets/img/icons/mysql-logo.svg" alt=""></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="http://belurp.com.ar" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/ats.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>ATS Productores</h3>
+                            <div class="box-text text-justify">
+                                <p>Web institucional para Productores de Seguros utilizando Bootstrap 4.</p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="http://ats.com.ar" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/athomic.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Athomic Web</h3>
+                            <div class="box-text text-justify">
+                                <p>Web desde la cual vendo mis servicios de desarrollo web.</p>
+                                <div class="icons"><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i></div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="http://athomic.com.ar" target="_blank">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <img src="./assets/img/proyectos/scraper.jpg" loading="lazy" class="img-fluid" alt="">
+                        <div class="box-content">
+                            <h3>Web Scraper</h3>
+                            <div class="box-text text-justify">
+                                <p>Web Scraper programado en JavaScript que obtiene información pública (distrito, coordenadas, etc) de direcciones dadas de la ciudad de Rosario</p>
+                                <div class="icons">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <a href="https://github.com/juanmatola/InfomapaRosario-scraper" target="_blank">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+            </div>
+        </section>
+  
+        <section class="section call-to-action my-5 py-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 my-md-5 mt-2">
+                    <h2 class="text-center">Descarga mi currículum</h2>
+                </div>
+                <div class="col-12 col-md-6 text-center my-md-5 my-3">
+                    <a class="btn_secondary" href="./cv.pdf" download="Juan Manuel Tola - CV">Descargar</a>
+                </div>
+            </div>
+        </section>
+  
+        <section class="section" id="contacto">
+            <h2 class="text-center my-5 mt-md-0 py-5" data-aos="fade-left"><span class="section__title"><strong>Contactarme</strong></span></h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 my-2">
+                    <ul class="contact__info">
+                        <li data-aos="zoom-in"><i class="bi bi-envelope"></i> tolajuanmanuel@gmail.com</li>
+                        <li data-aos="zoom-in"><i class="bi bi-phone"></i> +54 9 341 6 189654</li>
+                        <li data-aos="zoom-in"><i class="bi bi-geo-alt"></i> Rosario, Santa Fe, Argentina</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 my-2">
+                    <form action="https://formspree.io/f/mbjpywnd" method="POST" class="form" data-aos="zoom-in">
+                        <input type="text" name="name" placeholder="Nombre">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Consulta"></textarea>
+                        <div class="text-end">
+                            <button class="btn_primary" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+      
+      </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js" type="module"></script>
   </body>
 </html>

@@ -3,7 +3,6 @@
 body{
     margin: 0;
     padding: 0;
-    height: 200vh;
     width: 100vw;
     overflow-x: hidden;
     background-color: #ffffff;
@@ -14,12 +13,17 @@ h1{
     text-align: center;
 }
 
+.intro{
+    height: 150vh;
+    z-index: 1;
+}
+
 #title{
     position: fixed;
     flex-direction: column;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: inherit;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -37,19 +41,26 @@ h1{
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
+    z-index: inherit;
     transition: 1s;
-}
-
-#subtitle{
-    font-size: 18px;
-    opacity: 0;
 }
 
 @media (max-width: 768px) {
     #animator {
         transform: rotateZ(90deg);
     }
+}
+
+.typewriter #subtitle {
+    font-size: 18px;
+    overflow: hidden;
+    border-right: .15em solid #ded04b;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
 }
 
 .fadein{
@@ -66,4 +77,12 @@ h1{
 @keyframes fadeout {
     from{opacity: 100;}
     to{opacity: 0;}
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ded04b; }
 }
