@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap");
+
 body{
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@ body{
     width: 100vw;
     overflow-x: hidden;
     background-color: #ffffff;
-    font-family: 'Public Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 h1{
@@ -15,6 +16,7 @@ h1{
 
 #title{
     position: fixed;
+    flex-direction: column;
     top: 0;
     left: 0;
     z-index: 100;
@@ -23,13 +25,13 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 38px;
-    opacity: 0;
+    font-size: 30px;
+    opacity: 1;
     transition: .5s;
 }
 
-.svg {
+
+#animator {
     top: 0;
     left: 0;
     position: fixed;
@@ -39,12 +41,29 @@ h1{
     transition: 1s;
 }
 
-.fadein{
+#subtitle{
+    font-size: 18px;
     opacity: 0;
+}
+
+@media (max-width: 768px) {
+    #animator {
+        transform: rotateZ(90deg);
+    }
+}
+
+.fadein{
     animation: fadein 1s forwards ;
+}
+.fadeout{
+    animation: fadeout 1s forwards;
 }
 
 @keyframes fadein {
     from{opacity: 0;}
     to{opacity: 100;}
+}
+@keyframes fadeout {
+    from{opacity: 100;}
+    to{opacity: 0;}
 }
