@@ -1,6 +1,6 @@
 .menu {
     height: 0;
-    width: 0;
+    width: 100vw;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -15,11 +15,10 @@
 }
   
 .menu__content{
-    position: relative;
-    top: 10%;
-    left: 5%;
-    text-align: left;
-    padding-left: 20px;
+    text-align: start;
+    padding-top: 35px;
+    padding-left: 80px;
+    overflow: hidden;
 }
 .menu__content--social{
     display: flex;
@@ -28,6 +27,7 @@
   
 .menu a {
     padding: 8px;
+    white-space: nowrap;
     text-decoration: none;
     font-size: 1rem;
     color: #b8b8b8;
@@ -40,8 +40,12 @@
     color: #ded04b;
 }
   
-@media screen and (max-height: 450px) {
-    .menu a {font-size: 20px}
+@media (max-height: 768px) {
+    .menu a {font-size: 15px}
+    .menu__content{
+        text-align: end;
+        padding-right: 10px;
+    }
 }
 
 #openNav{
@@ -51,8 +55,8 @@
     cursor: pointer;
     height: 40px;
     width: 40px;
-    border: 2px solid #ded04b;
-    background-color: white;
+    border: 2px solid #1b1b1b;
+    background-color: #1b1b1b;
     border-radius: 0px;
     display: flex;
     align-items: center;
@@ -60,10 +64,13 @@
 }
 #openNav i {
     animation: rotateFade 1s;
+    font-size: 25px;
+    font-weight: bold;
     color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ded04b;
 }
 .color-dark{
     color: #1b1b1b !important;
