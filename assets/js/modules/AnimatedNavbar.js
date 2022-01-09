@@ -4,8 +4,8 @@ export class AnimatedNavbar {
         this.button = document.getElementById(buttonId);
         this.links = document.querySelectorAll(linksClass);
         this.status = 'closed';
-        this.lgWidth = '70%';
-        this.smWidth = '100%';
+        this.lgWidth = '100vw';
+        this.smWidth = '100vw';
         this.breakpoint = 768;
         this.init();
     }
@@ -24,17 +24,17 @@ export class AnimatedNavbar {
     }
     open () {
         if(this.viewportWidthObtain() < this.breakpoint){
-            this.navbar.style.width = this.lgWidth;
-        }else{
             this.navbar.style.width = this.smWidth;
+        }else{
+            this.navbar.style.width = this.lgWidth;
         }
-        this.navbar.style.height = '100%';
+        this.navbar.style.height = '200px';
         this.status = 'open';
         this.changeButtonToClose();
     }
     close () {
-        this.navbar.style.width = '0%';
-        this.navbar.style.height = '0%';
+        this.navbar.style.width = '100vw';
+        this.navbar.style.height = '0';
         this.status = 'closed';
         this.changeButtonToOpen();
     }
