@@ -23,6 +23,19 @@
     border-bottom: #1f1f1f solid 3px;
 }
 
+.content #sobremi li {
+    list-style: none;
+}
+
+.content #sobremi li::before {
+    content: "❒ ";
+    color: #dccf4c;
+    vertical-align: middle;
+}
+
+.content #sobremi li a:last-child::before{
+    content: " . ";
+}
 /* Intro */
 
 .intro-row {
@@ -84,7 +97,6 @@
     padding: 0px 0px;
     margin: 20px 0px;
     overflow: hidden;
-    border: solid 1px #212529;
 }
 
 .proyectos-box .box h3 {
