@@ -23,6 +23,16 @@
     border-bottom: #1f1f1f solid 3px;
 }
 
+/* Intro */
+
+.intro-row {
+    min-height: 90vh;
+}
+.perfil {
+    border-radius: 50%;
+    border-top-left-radius: 1%;
+    margin-bottom: 15px;
+}
 .content #sobremi li {
     list-style: none;
 }
@@ -35,16 +45,6 @@
 
 .content #sobremi li a:last-child::before{
     content: " . ";
-}
-/* Intro */
-
-.intro-row {
-    min-height: 90vh;
-}
-.perfil {
-    border-radius: 50%;
-    border-top-left-radius: 1%;
-    margin-bottom: 15px;
 }
 .links-de-interes{
     margin: 70px 0px;
@@ -73,7 +73,17 @@
     font-size: 3.5em;
     color: #dccf4c;
 }
+.tag {
+    display: inline-block;
+    padding: .2em .5em .3em;
+    font-weight: 600;
+    margin: .25em .1em;
+    background: #ded04b;
+    color: #1f1f1f;
+}
+
 /* efecto tridimencional */
+
 .efect_3d{
     transform:
         perspective(1000px)
